@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница про нас
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Обновление статьи</h1>
+    <form method="post">
+        <input type="title" name="title" id="title" class="form-control" placeholder="Название" value="{{ article.title }}"><br>
+        <textarea type="intro" name="intro" id="intro" class="form-control" placeholder="Анонс">{{ article.intro }}</textarea><br>
+        <textarea type="text" name="text" id="text" class="form-control" placeholder="Текст">{{ article.text }}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Отправить"><br>
+
+    </form>
+</div>
+{% endblock %}
